@@ -1,0 +1,5 @@
+1.Open cmd in Backend and run the command python app.py
+2.Open cmd in Frontent/empathai-ui and run the command npm start
+
+
+I know, it is inconvenient. I will automatize the process in the future
