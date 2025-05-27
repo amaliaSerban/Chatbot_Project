@@ -11,12 +11,12 @@ CORS(app)
 
 # Azure OpenAI client setup
 client = AzureOpenAI(
-    api_key="9Wd2OvAD0yNGtkfySEjbehqzE35wbgK6Uoo0JbQIcz5W7MPVpEteJQQJ99BEACfhMk5XJ3w3AAAAACOGDLCG",  # 🔐 Replace with your actual key, or load from environment
+    api_key="9Wd2OvAD0yNGtkfySEjbehqzE35wbgK6Uoo0JbQIcz5W7MPVpEteJQQJ99BEACfhMk5XJ3w3AAAAACOGDLCG",  
     api_version="2024-04-01-preview",
     azure_endpoint="https://fabia-max2y4dm-swedencentral.cognitiveservices.azure.com/"
 )
 
-# 🔁 GET /new-patient - Returns a random patient and system prompt
+# Returns a random patient and system prompt
 @app.route("/new-patient", methods=["GET"])
 def get_new_patient():
     try:
@@ -62,7 +62,7 @@ def chat():
     data = request.json
     messages = data.get("messages")
 
-    print("\n📥 Received messages:")
+    print("\n Received messages:")
     for msg in messages:
         print(f"{msg['role']}: {msg['content']}")
 
@@ -78,7 +78,7 @@ def chat():
         )
 
         reply = response.choices[0].message.content
-        print(f"\n🧠 Azure replied:\n{reply}\n")
+        print(f"\nAzure replied:\n{reply}\n")
 
         # Clean hallucinations
         reply = re.sub(r"<think>.*?</think>", "", reply, flags=re.DOTALL)
@@ -87,10 +87,10 @@ def chat():
         return jsonify({"reply": reply})
 
     except Exception as e:
-        print(f"\n❌ Azure API error:\n{str(e)}\n")
+        print(f"\n Azure API error:\n{str(e)}\n")
         return jsonify({"error": f"Azure OpenAI error: {str(e)}"}), 500
 
 
-# 🚀 Start server
+#Start server
 if __name__ == "__main__":
     app.run(debug=True)
