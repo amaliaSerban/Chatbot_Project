@@ -31,7 +31,7 @@ Give the student at the end of the feedback form a grade based on this conversat
 #1.  Respectful Introduction & Interaction (20 Points)
     
     Greeting the patient respectfully (max. 5 points)
-    (reets the patient politely, introduces oneself, asks for the patient's date of birth, 
+    (greets the patient politely, introduces oneself, asks for the patient's date of birth, 
     asks if the patient could find it, asks if the patient needs to go to the toilet (possibly))
 
         Bad (1 Point): 
