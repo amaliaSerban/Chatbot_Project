@@ -1,4 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
+
+
+/*function that displays the text smoothly*/
+function TypingMessage({ text }) {
+  const [displayed, setDisplayed] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayed(text.slice(0, i + 1));
+      i++;
+      if (i >= text.length) clearInterval(interval);
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <div className="message-bubble assistant">{displayed}</div>;
+}
 
 function App() {
   const [patient, setPatient] = useState(null);
@@ -8,138 +28,148 @@ function App() {
   const [feedback, setFeedback] = useState('');
   const [loadingFeedback, setLoadingFeedback] = useState(false);
 
-  // Load new patient info and prompt
   const loadNewPatient = async () => {
     try {
       const res = await fetch('http://localhost:5000/new-patient');
       const data = await res.json();
       setPatient(data.patient);
       setSystemPrompt(data.prompt);
-      setMessages([{ role: 'system', content: data.prompt }]);  // Reset with fresh prompt
-      setFeedback(''); // Clear feedback if restarting
+      setMessages([{ role: 'system', content: data.prompt }]);
+      setFeedback('');
     } catch (err) {
       console.error("Failed to fetch new patient:", err);
     }
   };
 
-  // Fetch patient on first load
   useEffect(() => {
     loadNewPatient();
   }, []);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
+const sendMessage = async () => {
+  if (!input.trim()) return;
+  const userMessage = { role: 'user', content: input };
+  const fullMessages = [...messages, userMessage];
+  setMessages(fullMessages);
+  setInput('');
 
-    const userMessage = { role: 'user', content: input };
-    const fullMessages = [...messages, userMessage];
+  // 🧼 Strip extra keys before sending to backend
+  const sanitizedMessages = fullMessages.map(({ role, content }) => ({ role, content }));
 
-    setMessages(fullMessages);
-    setInput('');
+  try {
+    const res = await fetch('http://localhost:5000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: sanitizedMessages })
+    });
 
-    try {
-      const res = await fetch('http://localhost:5000/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: fullMessages })
-      });
-
-      const data = await res.json();
-      if (data.reply) {
-        setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
-      }
-    } catch (err) {
-      console.error(" Chat error:", err);
+    const data = await res.json();
+    if (data.reply) {
+      setMessages(prev => [...prev, { role: 'assistant', content: data.reply, typing: true }]);
     }
-  };
+  } catch (err) {
+    console.error("Chat error:", err);
+  }
+};
 
-  const endConversation = async () => {
-    setLoadingFeedback(true);
-    try {
-      const res = await fetch('http://localhost:5000/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages })
-      });
+const endConversation = async () => {
+  setLoadingFeedback(true);
 
-      const data = await res.json();
-      if (data.feedback) {
-        setFeedback(data.feedback);
-      } else {
-        setFeedback("⚠️ No feedback received.");
-      }
-    } catch (err) {
-      console.error(" Feedback error:", err);
-      setFeedback(" Error fetching feedback.");
+  // 🧼 Strip extra keys before sending to backend
+  const sanitizedMessages = messages.map(({ role, content }) => ({ role, content }));
+
+  try {
+    const res = await fetch('http://localhost:5000/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: sanitizedMessages })
+    });
+
+    const data = await res.json();
+    if (data.feedback) {
+      setFeedback(data.feedback);
+    } else {
+      setFeedback("⚠️ No feedback received.");
     }
-    setLoadingFeedback(false);
-  };
+  } catch (err) {
+    console.error("Feedback error:", err);
+    setFeedback("Error fetching feedback.");
+  }
+
+  setLoadingFeedback(false);
+};
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '700px', margin: 'auto' }}>
-      <h1>EmpathAI</h1>
-
-      <button onClick={loadNewPatient} style={{ marginBottom: '1rem' }}>
-        🔄 Load New Patient
-      </button>
-
-      {patient && (
-        <div style={{ marginBottom: '1rem', padding: '1rem', border: '1px solid #ccc' }}>
-          <h3>👤 Patient Details</h3>
-            <ul>
-              <li><strong>Full Name:</strong> {patient.First_Name} {patient.Last_Name}</li>
-              <li><strong>Gender:</strong> {patient.Gender}</li>
-              <li><strong>Birthdate:</strong> {patient.Birthdate}</li>
-              <li><strong>Age:</strong> {patient.Age}</li>
-              <li><strong>Condition:</strong> {patient.Condition}</li>
-              <li><strong>Procedure:</strong> {patient.Procedure}</li>
-              <li><strong>Contrast Used:</strong> {patient.Contrast ? 'Yes' : 'No'}</li>
-              <li><strong>Length of Stay:</strong> {patient.Length_of_Stay} days</li>
-              <li><strong>Readmission:</strong> {patient.Readmission}</li>
-              <li><strong>Outcome:</strong> {patient.Outcome}</li>
-              <li><strong>Satisfaction:</strong> {patient.Satisfaction}/5</li>
-            </ul>
-        </div>
-      )}
-
-      <div style={{ minHeight: '300px', padding: '1rem', border: '1px solid #eee', background: '#f9f9f9' }}>
-        {messages.filter(msg => msg.role !== 'system').map((msg, index) => (
-          <div key={index}>
-            <strong>{msg.role === 'user' ? 'Nurse' : 'Patient'}:</strong> {msg.content}
-          </div>
-        ))}
+    <div className="App">
+      <div className="sidebar">
+        <h2>Patient Information</h2>
+        <hr />
+        {patient && (
+          <ul>
+            <li><strong>Full Name:</strong> {patient.First_Name} {patient.Last_Name}</li>
+            <li><strong>Patient ID:</strong> {patient.Patient_ID}</li>
+            <li><strong>Age:</strong> {patient.Age} years</li>
+            <li><strong>Gender:</strong> {patient.Gender}</li>
+            <li><strong>Birthdate:</strong> {patient.Birthdate}</li>
+            <li><strong>Procedure:</strong> {patient.Procedure}</li>
+            <li><strong>Condition:</strong> {patient.Condition}</li>
+            <li><strong>Contrast Used:</strong> {patient.Contrast ? 'Yes' : 'No'}</li>
+            <li><strong>Length of stay:</strong> {patient.Length_of_Stay} days</li>
+            <li><strong>Readmission:</strong> {patient.Readmission}</li>
+            <li><strong>Outcome:</strong> {patient.Outcome}</li>
+            <li><strong>Satisfaction:</strong> {patient.Satisfaction}/5</li>
+          </ul>
+        )}
+        <button onClick={loadNewPatient}>🔄 Reset Simulation</button>
       </div>
 
-      <input
-        value={input}
-        onChange={e => setInput(e.target.value)}
-        onKeyDown={e => e.key === 'Enter' && sendMessage()}
-        placeholder="Ask the patient something..."
-        style={{ width: '75%', padding: '0.5rem' }}
-        disabled={!!feedback}
-      />
-      <button onClick={sendMessage} style={{ padding: '0.5rem', marginLeft: '0.5rem' }} disabled={!!feedback}>
-        Send
-      </button>
-
-      <div style={{ marginTop: '1rem' }}>
-        <button onClick={endConversation} style={{ padding: '0.5rem', backgroundColor: '#e0e0e0' }} disabled={!!feedback}>
-          🧾 End Conversation and Get Feedback
-        </button>
-      </div>
-
-      {loadingFeedback && <p> Generating feedback...</p>}
-
-      {feedback && (
-        <div style={{ whiteSpace: 'pre-wrap', marginTop: '1rem', padding: '1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc' }}>
-          <h3> Feedback</h3>
-          {feedback}
-          <div style={{ marginTop: '1rem' }}>
-            <button onClick={loadNewPatient} style={{ padding: '0.5rem', backgroundColor: '#d0ffd0' }}>
-              🔄 Restart with New Patient
-            </button>
-          </div>
+      <div className="chat-panel">
+        <div className="chat-header">EmpathAI (pre alpha 0.3)</div>
+        <div className="chat-box">
+          {messages.filter(msg => msg.role !== 'system').map((msg, index) => (
+            <div key={index} className={`message-wrapper ${msg.role}`}>
+              <div className="avatar">{msg.role === 'user' ? '🧑‍⚕️' : '🤒'}</div>
+              {msg.role === 'assistant' && msg.typing ? (
+                <TypingMessage text={msg.content} />
+              ) : (
+                <div className={`message-bubble ${msg.role}`}>{msg.content}</div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
+
+        <div className="input-row">
+          <input
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && sendMessage()}
+            placeholder="Type your response..."
+            disabled={!!feedback}
+          />
+          <button onClick={sendMessage} className="send-btn" disabled={!!feedback}>
+            Send
+          </button>
+        </div>
+
+        <div style={{ marginTop: '1rem' }}>
+          <button onClick={endConversation} className="send-btn" disabled={!!feedback}>
+            Get Feedback
+          </button>
+        </div>
+
+        {loadingFeedback && <p>Generating feedback...</p>}
+
+        {feedback && (
+          <div className="feedback-box">
+            <h3>Feedback</h3>
+            {feedback}
+            <div style={{ marginTop: '1rem' }}>
+              <button onClick={loadNewPatient} className="send-btn">
+                🔄 Restart with New Patient
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,10 +1,39 @@
-You are a communication coach evaluating a student nurse.
+Evaluation Rubric
 
-Below is a transcript of a conversation between a nurse and a patient. Based on the interaction, provide:
+1. Respectful Interaction (20 Points)
 
-- A brief paragraph on what the nurse did well
-- A brief paragraph on what could be improved
-- An overall score out of 100
+Greeting & Introduction (5 pts): Greets politely, introduces self, asks for date of birth.
 
---- Conversation ---
-{full_chat}
+Verbal Communication (5 pts): Uses patient-appropriate language, speaks clearly, avoids jargon, invites patient to speak.
+
+Attention to Patient (10 pts): Makes time for conversation, listens actively, responds to patient cues.
+
+2. Professional Communication (20 Points)
+
+Clarity of Explanation (10 pts): Explains procedures clearly and simply, avoids technical terms, checks for understanding, invites questions.
+
+Answering Questions (10 pts): Responds respectfully and clearly, remains patient and professional, tailors answers to patient’s level.
+
+3. Emotional Awareness (20 Points)
+
+Recognition of Emotions (10 pts): Notices emotional signals (e.g., fear, sadness, frustration), acknowledges and validates them.
+
+Empathetic Response (10 pts): Shows genuine empathy through words or tone, gives the patient space to express emotions appropriately.
+
+4. Active Listening (20 Points)
+
+Follow-Up Questions (7 pts): Asks open-ended and clarifying questions that show interest and invite elaboration.
+
+Summarizing (7 pts): Summarizes main ideas and emotional content clearly, checks with patient for accuracy.
+
+Open vs. Closed Questions (6 pts): Prioritizes open questions, uses closed questions sparingly and purposefully.
+
+5. Clear Guidance & Support (20 Points)
+
+Instruction Delivery (5 pts): Gives clear and structured instructions before and during the exam.
+
+Contextual Information (5 pts): Tailors explanations to patient’s situation, asks about prior experiences if relevant.
+
+Emotional Support (5 pts): Checks if patient feels okay, offers reassurance, makes space for concerns.
+
+Guidance During Exam (5 pts): Provides safe and respectful support throughout the exam, encourages patient cooperation.

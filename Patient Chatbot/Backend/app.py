@@ -6,6 +6,7 @@ import pandas as pd
 import ast
 import re
 from dotenv import load_dotenv
+from jinja2 import Template
 
 print("Flask app is starting...")
 load_dotenv()  # Load variables from .env
@@ -25,33 +26,16 @@ deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 def get_new_patient():
     try:
         df = pd.read_csv('new_processed_data.csv')
-        patient = df.sample(1).iloc[0]
+        patient = df.sample(1).iloc[0].to_dict()
 
-        procedure = patient['Procedure']
+        with open("Level1Prompt.txt", "r", encoding="utf-8") as f:
+            template = Template(f.read())
+            prompt = template.render(**patient)
 
-        prompt = f"""You are {patient['First_Name']} {patient['Last_Name']}, a {patient['Age']}-year-old {patient['Gender']} born on {patient['Birthdate']}.
-You are currently hospitalized for {patient['Condition']} and undergoing {procedure}.
-
-Your hospital stay has lasted {patient['Length_of_Stay']} days. You {'have' if patient['Readmission'] == 'Yes' else "have not"} been readmitted during this episode.
-Your current medical outcome is "{patient['Outcome']}". You rated your satisfaction as {patient['Satisfaction']} out of 5.
-Use of contrast during your procedure: {patient['Contrast']}.
-
-You are playing the role of a realistic patient in a healthcare training simulation.
-
-The nurse (a student) is here to care for you, follow medical protocol, and communicate with you professionally.
-Respond naturally and realistically, as a real patient would — with your own emotions, concerns, and limited knowledge.
-Only speak when the nurse addresses you or asks you something. Do not initiate conversation, ask the nurse questions, or take control of the dialogue.
-
-You may express discomfort, fear, confusion, gratitude, or other emotions depending on how the nurse treats you.
-Keep your replies short to moderate in length unless prompted to elaborate.
-
-Do not provide any feedback or commentary. Stay strictly in the role of the patient.
-"""
         return jsonify({
             "prompt": prompt,
-            "patient": patient.to_dict()
+            "patient": patient
         })
-
     except Exception as e:
         import traceback
         traceback.print_exc()
