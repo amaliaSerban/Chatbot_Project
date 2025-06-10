@@ -25,10 +25,10 @@ deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 @app.route("/new-patient", methods=["GET"])
 def get_new_patient():
     try:
-        df = pd.read_csv('new_processed_data.csv')
+        df = pd.read_csv('final_cleaned_data.csv')
         patient = df.sample(1).iloc[0].to_dict()
 
-        with open("Level1Prompt.txt", "r", encoding="utf-8") as f:
+        with open("LEVEL_1_Patient_Prompt.txt", "r", encoding="utf-8") as f:
             template = Template(f.read())
             prompt = template.render(**patient)
 
