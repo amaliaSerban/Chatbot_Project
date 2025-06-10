@@ -1,0 +1,81 @@
+"Patiëntnummer,Voornaam,Achternaam,Geslacht,Geboortedatum,Leeftijd,	Aandoening,Onderzoek / Behandeling,Verblijfsduur,Heropname,Uitkomst,Tevredenheid,Contrastmiddel gebruikt"
+1001,Hugo,van der Horst,Mannelijk,1993-07-07,31,Dijbeenbreuk,Röntgenfoto dijbeen,5,Nee,Verbeterd,2,Vals
+1002,Femke,Freshour,Vrouwelijk,1979-08-16,45,Baarmoederfibromen,MRI baarmoeder,1,Nee,Verbeterd,4,Vals
+1003,Brent,Demmendaal,Mannelijk,2000-05-18,25,Handbreuk,Röntgenfoto hand,1,Ja,Stabiel,4,Vals
+1004,Lukas,Aschman,Mannelijk,1949-08-09,75,Prostaatcontrole,MRI prostaat ,4,Ja,Hersteld,4,Waar
+1005,Fabian,van der Steen,Mannelijk,1957-10-28,67,Beroerte,CT-scan hersenen spiraal,9,Nee,Hersteld,3,Vals
+1006,Mehmet,de Gruson,Mannelijk,1996-04-19,29,Dijbeenbreuk,Röntgenfoto dijbeen,1,Nee,Stabiel,5,Vals
+1007,Emily,van Haspengouw Hesbaye,Vrouwelijk,2009-02-22,16,Handbreuk,Röntgenfoto hand,9,Ja,Hersteld,1,Vals
+1008,Kyan,Wagenvoort,Mannelijk,1983-10-13,41,Lumbar Spine Pain,Röntgenfoto lumbale wervelkolom,7,Ja,Stabiel,4,Vals
+1009,JoÃ«l,van der Pluijm,Mannelijk,1956-03-04,69,Uitzaaiing,CT-Brain Axial,7,Nee,Stabiel,3,Vals
+1010,Laurens,van Gils,Mannelijk,1938-07-15,86,Beroerte,CT-scan hersenen spiraal,4,Nee,Stabiel,2,Vals
+1011,Thijn,van Doorn,Mannelijk,1980-01-14,45,Nekpijn ,Röntgenfoto cervicale wervelkolom,10,Nee,Stabiel,2,Vals
+1012,Robin,Bud,Vrouwelijk,1997-09-13,27,Handbreuk,Röntgenfoto hand,5,Nee,Verbeterd,5,Vals
+1013,Adam,Groenestein,Mannelijk,1982-10-14,42,Hoofdtrauma,Röntgenfoto schedel,4,Ja,Stabiel,2,Vals
+1014,Kian,Eelman,Mannelijk,1976-09-13,48,Bekkenbreuk,Röntgenfoto bekken,7,Ja,Stabiel,1,Vals
+1015,Sepp,Verheij,Mannelijk,1956-05-31,68,Leveronderzoek,MRI lever,1,Ja,Stabiel,1,Vals
+1016,Niels,van Rijnsbergen,Mannelijk,1994-12-13,30,Borstkasletsel,Röntgenfoto borstkas,2,Nee,Hersteld,4,Vals
+1017,Hugo,van Ham,Mannelijk,1970-10-27,54,Nekpijn ,Röntgenfoto cervicale wervelkolom,7,Ja,Hersteld,5,Vals
+1018,Mohammed,Korsman,Mannelijk,2007-10-15,17,Gescheurde voorste kruisband,Röntgenfoto pols,5,Nee,Stabiel,1,Vals
+1019,Amir,Schuurmans,Mannelijk,1946-05-20,79,Prostaatcontrole,MRI prostaat ,1,Ja,Verbeterd,5,Waar
+1020,Amir,Potters,Mannelijk,1997-08-03,27,ACL Tear,MRI knie (voorste kruisband),2,Nee,Hersteld,5,Vals
+1021,Fiene,d' Heripon,Vrouwelijk,1994-08-14,30,Voetletsel,Röntgenfoto voeten,1,Nee,Hersteld,1,Vals
+1022,Dex,Eerden,Mannelijk,1984-08-12,40,Verstuikte enkel,Röntgenfoto enkel,6,Ja,Hersteld,5,Vals
+1023,LoÃ¯s,Schwartsbach,Vrouwelijk,1967-06-30,57,Pijn in borstwervels,X-Ray TWK,1,Ja,Verbeterd,1,Vals
+1024,Fatima,van Drenthe,Vrouwelijk,1983-02-13,42,Dijbeenbreuk,Röntgenfoto dijbeen,10,Nee,Verbeterd,4,Vals
+1025,Matthias,Thatcher,Mannelijk,1956-01-10,69,Tumor in borstkas,CT-scan borstkas,9,Ja,Verbeterd,3,Waar
+1026,Fay,Vos,Vrouwelijk,1979-03-18,46,Baarmoederfibromen,MRI baarmoeder,1,Nee,Verbeterd,5,Vals
+1027,Yusuf,van Beieren,Mannelijk,1980-09-13,44,Pijn in borstwervels,X-Ray TWK,9,Nee,Hersteld,5,Vals
+1028,Floortje,Ridder,Vrouwelijk,1987-07-17,37,Gescheurde voorste kruisband,Röntgenfoto pols,4,Nee,Verbeterd,5,Vals
+1029,Sjoerd,'s Gravensande,Mannelijk,1955-09-29,69,Beroerte,CT-scan hersenen spiraal,1,Nee,Stabiel,5,Vals
+1030,Daan,FranÃ§oise,Mannelijk,1999-07-06,25,Schouderbreuk, Röntgenfoto schouder,5,Ja,Verbeterd,1,Vals
+1031,Jules,Ehlert,Mannelijk,1972-02-09,53,Nekpijn ,Röntgenfoto cervicale wervelkolom,1,Ja,Stabiel,3,Vals
+1032,Mustafa,Kruns,Mannelijk,1977-09-04,47,Buikpijn,Standaard CT-scan buik,7,Nee,Hersteld,4,Waar
+1033,Neeud,le Gallen,Mannelijk,2014-12-02,10,Schouderbreuk, Röntgenfoto schouder,9,Nee,Hersteld,4,Vals
+1034,Benjamin,Phillipsen,Mannelijk,1969-07-05,55,Uitzaaiing,CT-Brain Axial,1,Ja,Stabiel,2,Vals
+1035,Juliette,Mol,Vrouwelijk,1982-01-22,43,Voetletsel,Röntgenfoto voeten,6,Ja,Hersteld,2,Vals
+1036,Tara,van Nus,Vrouwelijk,1983-09-03,41,Baarmoederfibromen,MRI baarmoeder,6,Ja,Hersteld,5,Vals
+1037,Isa,van AllemaniÃ«,Vrouwelijk,1972-05-18,53,Baarmoederfibromen,MRI baarmoeder,7,Ja,Stabiel,2,Vals
+1038,Julian,Oennen,Mannelijk,1969-02-02,56,Buikpijn,Standaard CT-scan buik,4,Ja,Verbeterd,4,Waar
+1039,Nadia,van Embden,Vrouwelijk,1987-12-14,37,Pijn in borstwervels,X-Ray TWK,5,Nee,Hersteld,4,Vals
+1040,Lenn,Gruijl,Mannelijk,1946-05-30,78,Prostaatcontrole,MRI prostaat ,3,Nee,Verbeterd,2,Waar
+1041,Mirthe,de Vos,Vrouwelijk,1996-10-01,28,Hoofdtrauma,Röntgenfoto enkel,3,Ja,Verbeterd,4,Vals
+1042,Indy,Hekker,Vrouwelijk,1993-02-02,32,Verstuikte enkel,Röntgenfoto enkel,1,Nee,Stabiel,4,Vals
+1043,Jolie,Recers,Vrouwelijk,2009-06-05,15,Verstuikte enkel,Röntgenfoto enkel,4,Nee,Stabiel,1,Vals
+1044,Lorenzo,Coret,Mannelijk,2002-05-06,23,Voetletsel,Röntgenfoto voeten,8,Nee,Verbeterd,2,Vals
+1045,Jente,de Graaf,Vrouwelijk,1966-02-09,59,Pijn in borstwervels,X-Ray TWK,5,Nee,Stabiel,1,Vals
+1046,Adriana,Nek,Vrouwelijk,1947-11-28,77,Vermoeden van beroerte,CT-Brain Axial,9,Nee,Stabiel,1,Waar
+1047,Victoria,Schatteleijn,Vrouwelijk,1954-06-09,70,Buikpijn,Standaard CT-scan buik,7,Ja,Hersteld,3,Waar
+1048,Dana,Lelijveld,Vrouwelijk,1980-08-29,44,ACL Tear,MRI knie (voorste kruisband),10,Ja,Verbeterd,3,Vals
+1049,Sophia,van Dijk,Vrouwelijk,1964-06-17,60,Hoofdtrauma,Röntgenfoto schedel,6,Ja,Stabiel,4,Vals
+1050,Lizz,Vink,Vrouwelijk,1981-02-14,44,Dijbeenbreuk,Röntgenfoto dijbeen,2,Nee,Stabiel,4,Vals
+1051,Siem,Uit de Willigen,Mannelijk,1963-10-18,61,Prostaatcontrole,MRI prostaat ,1,Ja,Hersteld,1,Waar
+1052,Mehmet,van Dongen,Mannelijk,1992-12-05,32,Buikpijn,Standaard CT-scan buik,8,Ja,Stabiel,4,Waar
+1053,Nadia,van der Loo,Vrouwelijk,1990-03-29,35,Bekkenbreuk,Röntgenfoto bekken,6,Ja,Verbeterd,2,Vals
+1054,Fay,Lonen,Vrouwelijk,1997-05-27,28,Gescheurde voorste kruisband,Röntgenfoto pols,5,Ja,Hersteld,5,Vals
+1055,Fatima,Boddaugh,Vrouwelijk,1986-09-24,38,Dijbeenbreuk,Röntgenfoto dijbeen,4,Ja,Stabiel,4,Vals
+1056,Julia,Veltman,Vrouwelijk,1984-01-09,41,Baarmoederfibromen,MRI baarmoeder,8,Ja,Stabiel,3,Vals
+1057,Pippa,Totwiller,Vrouwelijk,1978-11-29,46,Hoofdtrauma,Röntgenfoto schedel,10,Ja,Hersteld,4,Vals
+1058,Merel,van Limburg,Vrouwelijk,1935-06-16,89,Uitzaaiing,CT-scan hersenen spiraal,4,Ja,Stabiel,2,Vals
+1059,Nienke,Lind,Vrouwelijk,1969-11-26,55,Lumbar Spine Pain,Röntgenfoto lumbale wervelkolom,8,Nee,Hersteld,5,Vals
+1060,Mehmet,Thout,Mannelijk,2000-05-21,25,Hoofdtrauma,Röntgenfoto schedel,3,Ja,Hersteld,3,Vals
+1061,Isis,van Alenburg,Vrouwelijk,1982-05-01,43,Voetletsel,Röntgenfoto voeten,8,Ja,Stabiel,1,Vals
+1062,Elize,Versluijs,Vrouwelijk,1985-07-13,39,Gescheurde voorste kruisband,Röntgenfoto pols,3,Ja,Stabiel,2,Vals
+1063,Jolie,van Holland,Vrouwelijk,1998-02-22,27,Voetletsel,Röntgenfoto voeten,8,Ja,Hersteld,1,Vals
+1064,Wessel,Unruoch Hunerik,Mannelijk,1951-09-12,73,Tumor in borstkas,CT-scan borstkas,9,Ja,Verbeterd,4,Waar
+1065,Angelina,Cornelissen,Vrouwelijk,1990-10-10,34,Buikpijn,Standaard CT-scan buik,4,Nee,Stabiel,2,Waar
+1066,DylaNee,Potters,Mannelijk,1957-04-29,68,Prostaatcontrole,MRI prostaat ,7,Ja,Verbeterd,5,Waar
+1067,Jill,Bosman,Vrouwelijk,1975-02-05,50,Vermoeden van beroerte,CT-Brain Axial,6,Ja,Stabiel,5,Vals
+1068,Chris,van Dijk,Mannelijk,1975-11-13,49,Bekkenbreuk,Röntgenfoto bekken,8,Ja,Verbeterd,1,Vals
+1069,Sem,Broeders,Mannelijk,1994-07-09,30,Voetletsel,Röntgenfoto voeten,9,Ja,Stabiel,1,Vals
+1070,Laurens,van den Oever,Mannelijk,1954-10-01,70,Prostaatcontrole,MRI prostaat ,2,Nee,Hersteld,3,Waar
+1071,Vera,van Suinvorde,Vrouwelijk,1978-02-13,47,Baarmoederfibromen,MRI baarmoeder,2,Ja,Stabiel,2,Vals
+1072,Hailey,Scheffers,Vrouwelijk,1988-01-05,37,ACL Tear,MRI knie (voorste kruisband),3,Nee,Verbeterd,3,Vals
+1073,Janne,van Herstal,Vrouwelijk,1990-05-25,35,Hoofdtrauma,Röntgenfoto schedel,6,Nee,Verbeterd,4,Vals
+1074,Suze,Demmendaal,Vrouwelijk,1964-11-25,60,Baarmoederfibromen,MRI baarmoeder,9,Ja,Hersteld,3,Vals
+1075,EsmÃ©e,van Vliet,Vrouwelijk,1996-04-24,29,Verstuikte enkel,Röntgenfoto enkel,1,Ja,Verbeterd,4,Vals
+"1076,Wouter,""Werl-Arnsberg, van"",Mannelijk,1939-05-05,86,Prostaatcontrole,MRI prostaat ,9,Nee,Hersteld,3,Waar"
+1077,Yusuf,Kuijpers,Mannelijk,1999-09-16,25,Schouderbreuk, Röntgenfoto schouder,5,Nee,Stabiel,1,Vals
+1078,Sam,Heere,Vrouwelijk,1975-04-09,50,Baarmoederfibromen,MRI baarmoeder,8,Nee,Verbeterd,2,Waar
+1079,Arie,Ghoerle,Mannelijk,1956-02-07,69,Beroerte,CT-scan hersenen spiraal,5,Nee,Hersteld,4,Vals
+1080,Neeah,Geerling,Mannelijk,1976-10-20,48,Voetletsel,Röntgenfoto voeten,8,Nee,Verbeterd,3,Vals
