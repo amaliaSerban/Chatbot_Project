@@ -1,41 +1,33 @@
 Patient_ID,First_Name,Last_Name,Gender,Birthdate,Age,Condition,Procedure,Length_of_Stay,Readmission,Outcome,Satisfaction,Contrast
 1001,Hugo,van der Horst,Male,1993-07-07,31,Femur Fracture,X-Ray Femur,5,No,Improved,2,False
-1002,Femke,Freshour,Female,1979-08-16,45,Uterine Fibroids,MRI-Uterus,1,No,Improved,4,False
 1003,Brent,Demmendaal,Male,2000-05-18,25,Hand Fracture,X-Ray Hand,1,Yes,Stable,4,False
-1004,Lukas,Aschman,Male,1949-08-09,75,Prostate Check,MRI-Prostate,4,Yes,Recovered,4,True
-1005,Fabian,van der Steen,Male,1957-10-28,67,Stroke,CT-Brain Helical,9,No,Recovered,3,False
+1005,Fabian,van der Steen,Male,1957-10-28,73,Thoracic Tumor,CT-Thorax,9,No,Recovered,3,True
 1006,Mehmet,de Gruson,Male,1996-04-19,29,Femur Fracture,X-Ray Femur,1,No,Stable,5,False
 1007,Emily,van Haspengouw Hesbaye,Female,2009-02-22,16,Hand Fracture,X-Ray Hand,9,Yes,Recovered,1,False
 1008,Kyan,Wagenvoort,Male,1983-10-13,41,Lumbar Spine Pain,X-Ray LWK,7,Yes,Stable,4,False
 1009,Joël,van der Pluijm,Male,1956-03-04,69,Metastase,CT-Brain Axial,7,No,Stable,3,False
-1010,Laurens,van Gils,Male,1938-07-15,86,Stroke,CT-Brain Helical,4,No,Stable,2,False
+1010,Laurens,van Gils,Male,1938-07-15,30,Thoracic Injury,X-Ray Thorax,4,No,Stable,2,False
 1011,Thijn,van Doorn,Male,1980-01-14,45,Cervical Spine Pain,X-Ray CWK,10,No,Stable,2,False
 1012,Robin,Bud,Female,1997-09-13,27,Hand Fracture,X-Ray Hand,5,No,Improved,5,False
 1013,Adam,Groenestein,Male,1982-10-14,42,Head Trauma,X-Ray Skull,4,Yes,Stable,2,False
 1014,Kian,Eelman,Male,1976-09-13,48,Pelvic Fracture,X-Ray Pelvis,7,Yes,Stable,1,False
-1015,Sepp,Verheij,Male,1956-05-31,68,Liver Evaluation,MRI-Liver,1,Yes,Stable,1,False
+1015,Sepp,Verheij,Male,1956-05-31,68,Liver Evaluation,CT-Liver,1,Yes,Stable,1,True
 1016,Niels,van Rijnsbergen,Male,1994-12-13,30,Thoracic Injury,X-Ray Thorax,2,No,Recovered,4,False
 1017,Hugo,van Ham,Male,1970-10-27,54,Cervical Spine Pain,X-Ray CWK,7,Yes,Recovered,5,False
 1018,Mohammed,Korsman,Male,2007-10-15,17,Wrist Injury,X-Ray Wrist,5,No,Stable,1,False
-1019,Amir,Schuurmans,Male,1946-05-20,79,Prostate Check,MRI-Prostate,1,Yes,Improved,5,True
 1020,Amir,Potters,Male,1997-08-03,27,ACL Tear,MRI-Knee ACL,2,No,Recovered,5,False
-1021,Fiene,d' Heripon,Female,1994-08-14,30,Foot Injury,X-Ray Feet,1,No,Recovered,1,False
 1022,Dex,Eerden,Male,1984-08-12,40,Ankle Sprain,X-Ray Ankle,6,Yes,Recovered,5,False
 1023,Loïs,Schwartsbach,Female,1967-06-30,57,Thoracic Spine Pain,X-Ray TWK,1,Yes,Improved,1,False
 1024,Fatima,van Drenthe,Female,1983-02-13,42,Femur Fracture,X-Ray Femur,10,No,Improved,4,False
 1025,Matthias,Thatcher,Male,1956-01-10,69,Thoracic Tumor,CT-Thorax,9,Yes,Improved,3,True
-1026,Fay,Vos,Female,1979-03-18,46,Uterine Fibroids,MRI-Uterus,1,No,Improved,5,False
 1027,Yusuf,van Beieren,Male,1980-09-13,44,Thoracic Spine Pain,X-Ray TWK,9,No,Recovered,5,False
 1028,Floortje,Ridder,Female,1987-07-17,37,Wrist Injury,X-Ray Wrist,4,No,Improved,5,False
-1029,Sjoerd,'s Gravensande,Male,1955-09-29,69,Stroke,CT-Brain Helical,1,No,Stable,5,False
+1029,Sjoerd,'s Gravensande,Female,1955-09-29,55,Lumbar Spine Pain,X-Ray LWK,1,No,Stable,5,False
 1030,Daan,Françoise,Male,1999-07-06,25,Shoulder Fracture,X-Ray Shoulder,5,Yes,Improved,1,False
 1031,Jules,Ehlert,Male,1972-02-09,53,Cervical Spine Pain,X-Ray CWK,1,Yes,Stable,3,False
 1032,Mustafa,Kruns,Male,1977-09-04,47,Abdominal Pain,CT-Abdomen standard,7,No,Recovered,4,True
 1033,Noud,le Gallen,Male,2014-12-02,10,Shoulder Fracture,X-Ray Shoulder,9,No,Recovered,4,False
 1034,Benjamin,Phillipsen,Male,1969-07-05,55,Metastase,CT-Brain Axial,1,Yes,Stable,2,False
-1035,Juliette,Mol,Female,1982-01-22,43,Foot Injury,X-Ray Feet,6,Yes,Recovered,2,False
-1036,Tara,van Nus,Female,1983-09-03,41,Uterine Fibroids,MRI-Uterus,6,Yes,Recovered,5,False
-1037,Isa,van Allemanië,Female,1972-05-18,53,Uterine Fibroids,MRI-Uterus,7,Yes,Stable,2,False
 1038,Julian,Oennen,Male,1969-02-02,56,Abdominal Pain,CT-Abdomen standard,4,Yes,Improved,4,True
 1039,Nadia,van Embden,Female,1987-12-14,37,Thoracic Spine Pain,X-Ray TWK,5,No,Recovered,4,False
 1040,Lenn,Gruijl,Male,1946-05-30,78,Prostate Check,MRI-Prostate,3,No,Improved,2,True
@@ -54,9 +46,9 @@ Patient_ID,First_Name,Last_Name,Gender,Birthdate,Age,Condition,Procedure,Length_
 1053,Nadia,van der Loo,Female,1990-03-29,35,Pelvic Fracture,X-Ray Pelvis,6,Yes,Improved,2,False
 1054,Fay,Lonen,Female,1997-05-27,28,Wrist Injury,X-Ray Wrist,5,Yes,Recovered,5,False
 1055,Fatima,Boddaugh,Female,1986-09-24,38,Femur Fracture,X-Ray Femur,4,Yes,Stable,4,False
-1056,Julia,Veltman,Female,1984-01-09,41,Uterine Fibroids,MRI-Uterus,8,Yes,Stable,3,False
+1056,Julia,Veltman,Female,1984-01-09,41,Uterine Fibroids,MRI-Uterus,8,Yes,Stable,3,True
 1057,Pippa,Totwiller,Female,1978-11-29,46,Head Trauma,X-Ray Skull,10,Yes,Recovered,4,False
-1058,Merel,van Limburg,Female,1935-06-16,89,Metastase,CT-Brain Helical,4,Yes,Stable,2,False
+1058,Merel,van Limburg,Male,1935-06-16,69,Thoracic Tumor,CT-Thorax,4,Yes,Stable,2,True
 1059,Nienke,Lind,Female,1969-11-26,55,Lumbar Spine Pain,X-Ray LWK,8,No,Recovered,5,False
 1060,Mehmet,Thout,Male,2000-05-21,25,Head Trauma,X-Ray Skull,3,Yes,Recovered,3,False
 1061,Isis,van Alenburg,Female,1982-05-01,43,Foot Injury,X-Ray Feet,8,Yes,Stable,1,False
@@ -67,15 +59,21 @@ Patient_ID,First_Name,Last_Name,Gender,Birthdate,Age,Condition,Procedure,Length_
 1066,Myrthe,Potters,Female,1957-04-29,68,Prostate Check,MRI-Prostate,7,Yes,Improved,5,True
 1067,Jill,Bosman,Female,1975-02-05,50,Suspected Stroke,CT-Brain Axial,6,Yes,Stable,5,False
 1068,Chris,van Dijk,Male,1975-11-13,49,Pelvic Fracture,X-Ray Pelvis,8,Yes,Improved,1,False
-1069,Julia,Broeders,Female,1994-07-09,30,Foot Injury,X-Ray Feet,9,Yes,Stable,1,False
-1070,Laurens,van den Oever,Male,1954-10-01,70,Prostate Check,MRI-Prostate,2,No,Recovered,3,True
-1071,Vera,van Suinvorde,Female,1978-02-13,47,Uterine Fibroids,MRI-Uterus,2,Yes,Stable,2,False
 1072,Hailey,Scheffers,Female,1988-01-05,37,ACL Tear,MRI-Knee ACL,3,No,Improved,3,False
 1073,Janne,van Herstal,Female,1990-05-25,35,Head Trauma,X-Ray Skull,6,No,Improved,4,False
 1074,Suze,Demmendaal,Female,1964-11-25,60,Uterine Fibroids,MRI-Uterus,9,Yes,Recovered,3,False
 1075,Esmée,van Vliet,Female,1996-04-24,29,Ankle Sprain,X-Ray Ankle,1,Yes,Improved,4,False
 1076,Julia,van Werl-Arnsberg,Female,1939-05-05,86,Prostate Check,MRI-Prostate,9,No,Recovered,3,True
 1077,Yusuf,Kuijpers,Male,1999-09-16,25,Shoulder Fracture,X-Ray Shoulder,5,No,Stable,1,False
-1078,Samantha,Heere,Female,1975-04-09,50,Uterine Fibroids,MRI-Uterus,8,No,Improved,2,True
-1079,Ariel,Ghoerle,Female,1956-02-07,69,Stroke,CT-Brain Helical,5,No,Recovered,4,False
+1078,Samantha,Heere,Female,1975-04-09,50,Uterine Fibroids,MRI-Uterus,8,No,Improved,2,False
+1079,Ariel,Ghoerle,Female,1956-02-07,55,Lumbar Spine Pain,X-Ray LWK,5,No,Recovered,4,False
 1080,Nora,Geerling,Female,1976-10-20,48,Foot Injury,X-Ray Feet,8,No,Improved,3,False
+1072,Hailey,Scheffers,Female,1988-01-05,37,ACL Tear,MRI-Knee ACL,3,No,Improved,3,False
+1016,Niels,van Rijnsbergen,Male,1994-12-13,30,Thoracic Injury,X-Ray Thorax,2,No,Recovered,4,False
+1058,Merel,van Limburg,Male,1935-06-16,69,Thoracic Tumor,CT-Thorax,4,Yes,Stable,2,True
+1064,Wessel,Unruoch Hunerik,Male,1951-09-12,73,Thoracic Tumor,CT-Thorax,9,Yes,Improved,4,True
+1010,Laurens,van Gils,Male,1938-07-15,30,Thoracic Injury,X-Ray Thorax,4,No,Stable,2,False
+1005,Fabian,van der Steen,Male,1957-10-28,73,Thoracic Tumor,CT-Thorax,9,No,Recovered,3,True
+1025,Matthias,Thatcher,Male,1956-01-10,69,Thoracic Tumor,CT-Thorax,9,Yes,Improved,3,True
+1020,Amir,Potters,Male,1997-08-03,27,ACL Tear,MRI-Knee ACL,2,No,Recovered,5,False
+1048,Dana,Lelijveld,Female,1980-08-29,44,ACL Tear,MRI-Knee ACL,10,Yes,Improved,3,False
