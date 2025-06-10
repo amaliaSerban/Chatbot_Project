@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+/*useState for variables and useEffect for loading the patient on first render */
 
 
 /*function that displays the text smoothly*/
@@ -20,14 +21,18 @@ function TypingMessage({ text }) {
   return <div className="message-bubble assistant">{displayed}</div>;
 }
 
-function App() {
-  const [patient, setPatient] = useState(null);
-  const [systemPrompt, setSystemPrompt] = useState('');
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [feedback, setFeedback] = useState('');
-  const [loadingFeedback, setLoadingFeedback] = useState(false);
 
+function App() {
+  const [patient, setPatient] = useState(null);   /*patient obj from backend */
+  const [systemPrompt, setSystemPrompt] = useState('');  /*system prompt for the chatbot */
+  const [messages, setMessages] = useState([]);    /*chat history */
+  const [input, setInput] = useState('');         /*user input */
+  const [feedback, setFeedback] = useState('');   /*feedback from the chatbot */
+  const [loadingFeedback, setLoadingFeedback] = useState(false); /*loading state for feedback */
+
+
+  /*function to load a new patient from the backend
+    and resets the messages with only the system prompt +clears feedback */
   const loadNewPatient = async () => {
     try {
       const res = await fetch('http://localhost:5000/new-patient');
@@ -41,10 +46,13 @@ function App() {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {       /*runs the function loadNewPatient() when starting*/
     loadNewPatient();
   }, []);
 
+
+  /*function that adds the user messages to "messages"
+    sends the chat history to /chat backend route*/
 const sendMessage = async () => {
   if (!input.trim()) return;
   const userMessage = { role: 'user', content: input };
@@ -52,7 +60,7 @@ const sendMessage = async () => {
   setMessages(fullMessages);
   setInput('');
 
-  // 🧼 Strip extra keys before sending to backend
+  //  Strip extra keys before sending to backend
   const sanitizedMessages = fullMessages.map(({ role, content }) => ({ role, content }));
 
   try {
@@ -71,10 +79,13 @@ const sendMessage = async () => {
   }
 };
 
+
+/*function that ends the conversation 
+and gets feedback from the backend*/
 const endConversation = async () => {
   setLoadingFeedback(true);
 
-  // 🧼 Strip extra keys before sending to backend
+  //  Strip extra keys before sending to backend
   const sanitizedMessages = messages.map(({ role, content }) => ({ role, content }));
 
   try {
@@ -88,7 +99,7 @@ const endConversation = async () => {
     if (data.feedback) {
       setFeedback(data.feedback);
     } else {
-      setFeedback("⚠️ No feedback received.");
+      setFeedback(" No feedback received.");
     }
   } catch (err) {
     console.error("Feedback error:", err);
@@ -104,7 +115,8 @@ const endConversation = async () => {
         <h2>Patient Information</h2>
         <hr />
         {patient && (
-          <ul>
+          /*displaying patient information */
+          <ul> 
             <li><strong>Full Name:</strong> {patient.First_Name} {patient.Last_Name}</li>
             <li><strong>Patient ID:</strong> {patient.Patient_ID}</li>
             <li><strong>Age:</strong> {patient.Age} years</li>

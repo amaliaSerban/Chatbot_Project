@@ -49,13 +49,13 @@ def chat():
     data = request.json
     messages = data.get("messages", [])
 
-    print("\n📥 Received messages:")
+    print("\n Received messages:")
     for msg in messages:
         print(msg)
         if 'role' in msg and 'content' in msg:
             print(f"{msg['role']}: {msg['content']}")
         else:
-            print("⚠️ Skipping malformed message:", msg)
+            print(" Skipping malformed message:", msg)
 
     try:
         response = openai.ChatCompletion.create(
