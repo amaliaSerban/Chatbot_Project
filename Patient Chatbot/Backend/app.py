@@ -25,10 +25,10 @@ deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 @app.route("/new-patient", methods=["GET"])
 def get_new_patient():
     try:
-        df = pd.read_csv('final_cleaned_data.csv')
+        df = pd.read_csv('Prompts&Data/final_cleaned_data.csv')
         patient = df.sample(1).iloc[0].to_dict()
 
-        with open("LEVEL_1_Patient_Prompt.txt", "r", encoding="utf-8") as f:
+        with open("Prompts&Data/LEVEL_1_Patient_Prompt.txt", "r", encoding="utf-8") as f:
             template = Template(f.read())
             prompt = template.render(**patient)
 
@@ -86,7 +86,7 @@ def get_feedback():
         full_chat = "\n".join([f"{msg['role'].capitalize()}: {msg['content']}" for msg in messages])
 
         # Load feedback prompt template from file
-        with open("Feedback_short.txt", "r", encoding="utf-8") as file:
+        with open("Prompts&Data/Feedback_short.txt", "r", encoding="utf-8") as file:
             rubric = file.read()
 
         # Combine conversation and rubric into the final prompt

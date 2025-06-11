@@ -135,11 +135,18 @@ const endConversation = async () => {
       </div>
 
       <div className="chat-panel">
-        <div className="chat-header">EmpathAI (pre alpha 0.3)</div>
+        <div className="chat-header">EmpathAI (beta 0.4)</div>
         <div className="chat-box">
           {messages.filter(msg => msg.role !== 'system').map((msg, index) => (
             <div key={index} className={`message-wrapper ${msg.role}`}>
-              <div className="avatar">{msg.role === 'user' ? '🧑‍⚕️' : '🤒'}</div>
+              <div className="avatar">
+                <img
+                  src={msg.role === 'user' ? '/doctorIcon.png' : '/botIcon.jpg'}
+                  alt={msg.role === 'user' ? 'Radiographer' : 'Patient'}
+                  className="avatar"
+                />
+              </div>
+
               {msg.role === 'assistant' && msg.typing ? (
                 <TypingMessage text={msg.content} />
               ) : (

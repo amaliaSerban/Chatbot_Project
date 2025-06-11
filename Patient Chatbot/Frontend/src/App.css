@@ -197,3 +197,17 @@ button.send-btn:disabled {
   background-color: #e6f5f4;
   text-align: left;
 }
+
+
+
+.avatar img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px; /* 👈 adjust this value as needed */
+}
+
