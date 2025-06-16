@@ -208,6 +208,6 @@ button.send-btn:disabled {
     display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px; /* 👈 adjust this value as needed */
+  margin-top: 8px; 
 }
 
